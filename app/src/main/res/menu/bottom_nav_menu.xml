@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/film"
+        android:icon="@drawable/film"
+        android:title="@string/title_film" />
+
+    <item
+        android:id="@+id/tv"
+        android:icon="@drawable/tv"
+        android:title="@string/title_tv" />
+    <item
+        android:id="@+id/anime"
+        android:icon="@drawable/anime"
+        android:title="@string/title_anime" />
+
+</menu>
