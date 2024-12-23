@@ -29,21 +29,18 @@ public class MainActivity extends AppCompatActivity {
         TextInputLayout searchBarLayout = findViewById(R.id.search_bar_layout);
 
         // Aggiungi un click listener al FAB
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // All'interno del click listener del FAB
-                if (searchBarLayout.getVisibility() == View.GONE) {
-                    // Mostra la barra di ricerca con una transizione slide
-                    searchBarLayout.setVisibility(View.VISIBLE);
-                    Animation slideIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_top);
-                    searchBarLayout.startAnimation(slideIn);
-                } else {
-                    // Nascondi la barra di ricerca con una transizione slide
-                    Animation slideOut = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_out_top);
-                    searchBarLayout.startAnimation(slideOut);
-                    searchBarLayout.setVisibility(View.GONE);
-                }
+        fab.setOnClickListener(v -> {
+            // All'interno del click listener del FAB
+            if (searchBarLayout.getVisibility() == View.GONE) {
+                // Mostra la barra di ricerca con una transizione slide
+                searchBarLayout.setVisibility(View.VISIBLE);
+                Animation slideIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_top);
+                searchBarLayout.startAnimation(slideIn);
+            } else {
+                // Nascondi la barra di ricerca con una transizione slide
+                Animation slideOut = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_out_top);
+                searchBarLayout.startAnimation(slideOut);
+                searchBarLayout.setVisibility(View.GONE);
             }
         });
 
