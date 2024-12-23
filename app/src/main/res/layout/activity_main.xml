@@ -13,6 +13,37 @@
         android:layout_height="match_parent"
         android:layout_gravity="top|center" />
 
+    <!-- La barra di ricerca nascosta -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/bottom_navigation_background">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/cerca"
+        android:inputType="text"
+        android:background="@drawable/bottom_navigation_background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:srcCompat="@drawable/cerca"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="360dp"/>
+
     <!-- Barra di navigazione in basso -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
